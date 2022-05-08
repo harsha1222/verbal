@@ -10,7 +10,8 @@ import Search from './components/Search'
 import Checkin from './components/Checkin'
 import TrainList from './components/TrainList'
 import AddTrain from './components/AddTrain'
-
+import BookingForm from './components/BookingForm'
+import Error from './components/Error'
 import PaymentForm from './components/PaymentForm'
 
 
@@ -48,7 +49,7 @@ function App() {
             <Footer />
           </Route>
 
-
+         
           
 
 
@@ -71,7 +72,15 @@ function App() {
             <Checkin />
             <Footer />
           </Route>
-
+          <Route exact path="/booking">
+            <BookingForm></BookingForm>
+            <Footer />
+          </Route>
+          
+          <Route path='*'>
+            <Error />
+            <Footer />
+          </Route>
           
 
         </Switch>

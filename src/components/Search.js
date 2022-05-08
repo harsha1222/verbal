@@ -78,7 +78,8 @@ const Search = () => {
                                                         <td>{TrainDetails.sleeperClass}</td>
                                                         <td>{TrainDetails.SecondClass}</td>                                                        <td>{TrainDetails.firstClass}</td>
                                                         <td>{TrainDetails.trainDate}</td>
-                                                        
+                                                        <td> <Link className="btn btn-info" to='/booking'> Book </Link>
+                                                        </td>
                                                             
 
 

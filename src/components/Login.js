@@ -145,7 +145,7 @@ const Login = () => {
               <button
                 className="btn btn-success"
                 type="submit"
-                onClick={() => { }}
+                onClick={(e) => signInSuccess (e)}
               >
                 Sign In
               </button>

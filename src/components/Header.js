@@ -21,9 +21,12 @@ const Header = () => {
           <Link className='links' to='/search'>
             USER
           </Link>
+          <Link className='links' to='/booking'>
+            BOOK
+          </Link>
 
           <Link className='links' to='/checkin'>
-            Checkin
+            CHECKIN
           </Link>
 
          
