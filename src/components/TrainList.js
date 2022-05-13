@@ -33,6 +33,8 @@ const TrainList = () => {
             <br></br><br></br>
             <h2 className="text-center">List Of Trains</h2>
             <Link to="/addTrain" className="btn btn-success" >Add Train</Link>
+            <Link to="/paymentHistory" className="btn btn-success" >Payment History</Link>
+            <Link to="/UserHistory" className="btn btn-success" >User Details</Link>
             <br></br><br></br>
             <table className="table table-bordered table-striped">
                 <thead>

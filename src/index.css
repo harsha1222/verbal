@@ -23,7 +23,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: rgb(187, 187, 171);
+  background-color: rgb(147, 184, 200);
 }
 
 .header .links {
@@ -33,9 +33,9 @@ body {
 }
 
 .showcase {
-  background: url('https://bestanimations.com/media/trains/1035164040speeding-train-view-gif.gif')
-    no-repeat center/cover;
+  background: url('https://i.pinimg.com/originals/0c/0f/1d/0c0f1d5600075b762ec2139480300fd3.gif');
   height: 750px;
+  
 }
 
 .showcase .showcase-overlay {
@@ -57,7 +57,8 @@ body {
 .services {
   padding: 50px;
   text-align: center;
-  background-color: rgb(128, 124, 112);
+  background-color: rgb(147, 184, 200);
+  border-bottom: 4px,solid,black ;
 }
 
 .services h3 {
@@ -67,15 +68,16 @@ body {
 }
 
 .services .grid div {
-  background-color: #f0ecd4;
+  background-color: #FFFAF0;
   margin-bottom: 30px;
   padding: 40px;
   border-radius: 10px;
   text-align: center;
+  color: #000;
 }
 
 .services .grid div img {
-  border-radius: 150px;
+  border-radius: 10px;
   
 }
 
@@ -164,7 +166,7 @@ body {
   }
 
   .services .grid {
-    display: grid;
+    display: block flow-root;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
    
@@ -213,24 +215,109 @@ body {
 
 }
 
+.pp{
+  color: #020806;
+  padding: auto;
+  margin-right: 5%;
+  margin-left: 10%;
+  line-height: 20px;
+}
+.Heading{
+  text-align: center;
+  margin-left: 35%;
+  color: rgb(14, 6, 6);
+  display: inline-block;
+  
+}
+.kk {
+  background: url('https://blog.travelkhana.com/tkblog/wp-content/uploads/sites/2/2018/03/Pamban-bridge-566x400.png')
+    no-repeat center/cover;
+  height: 750px;
+
+}
+.ll{
+  background-color: white;
+
+    width: 1440px;
+    border: 10px solid gray;
+    padding: 20px;
+    margin: 0px;
+  
+}
+.line{
+  text-align: center;
+  font-size: 30px;
+}
+
+.yu{
+  background: url('https://blog.travelkhana.com/tkblog/wp-content/uploads/sites/2/2018/03/Pamban-bridge-566x400.png')
+  no-repeat center/cover;
+  height: 750px;
+
+}
+.logout{
+  text-align: center;
+}
 
 
+.nn{
+  text-align: center;
+  background: url('https://blog.travelkhana.com/tkblog/wp-content/uploads/sites/2/2018/03/Pamban-bridge-566x400.png')
+    no-repeat center/cover;
+    height: 750px;
+    text-align: center;
+}
 
+.oo{
+  text-align: center;
+  color: #fff;
+  
+}
+.tt{
+  text-align: center;
+  color: #fff;
+}
+.qq{
+  
 
+  text-align: center;
+  color: #fff;
+}
+.ZZ{
+  text-align: center;
+ 
+  font-size: 64px;
+  font-weight: 500;
+    line-height: 1.2;
+    color: #fff;
+  
+ 
+}
+.userlogout{
+  text-align: right;
+}
+.vn{
+color: black;
+}
+.bk{
+  color: black;
+}
+.op{
+  color: black;
+}
+.header .links:hover{
+  opacity: 1.0;
+  font-size: 1.0rem;
+  color: rgb(220, 163, 95);
+}
+.checkin-box{
+ background-color: aquamarine;
+  height: 100%;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+.whi{
+  color: whitesmoke;
+}
 
 
 

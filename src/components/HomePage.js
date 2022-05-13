@@ -4,12 +4,12 @@ const Showcase = () => {
   return (
     <section className='showcase'>
       <div className='showcase-overlay'>
-        <h1>Welcome to PRRS</h1>
-        <h3>PAKISTAN RAILWAY RESERVATION SYSTEM</h3>
+        <h1> Welcome to IRCTC</h1>
+        <h3>( INDIAN RAILWAY CATERING AND TOURISM CORPORATION )</h3>
         
         <br></br>
-        <p>
-          Get to tour the world in style. Select a destination, book your
+        <p className='whi'>
+          Get to tour the India in style. Select a destination, book your
           train, and off you go!
         </p>
       </div>

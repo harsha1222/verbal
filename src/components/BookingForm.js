@@ -32,9 +32,19 @@ const BookingForm = () => {
         }).catch(error => {
             console.log(error)
         })
-
+        // setTimeout(()=>{
+        //   console.log("i'm here")
+          
+        //   window.location.href = "http://localhost:9004/";                 //it will redirect to paytm port
+    
+        // },2000)
     }
+const paytm = (e) => {setTimeout(()=>{
+  console.log("i'm here")
+  
+  window.location.href = "http://localhost:9004/";                 //it will redirect to paytm port
 
+},2000) }
 
   return (
     <div>
@@ -177,10 +187,12 @@ const BookingForm = () => {
 
                 </div>
 
-                <Link className="btn btn-success" onClick={(e) => bookedTrain(e)}  >Submit </Link>
+                <Link className="btn btn-success" onClick={(e) => bookedTrain(e)}  >Submit </Link> 
+                <Link className="btn btn-info" onClick={(e) => paytm(e)}  >paytm </Link>
                 <Link className="btn btn-info" to='/payment'> Goto Payment </Link> 
                
               </form>
+            
             </div>
 
           </div>

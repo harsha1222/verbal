@@ -13,8 +13,18 @@ import AddTrain from './components/AddTrain'
 import BookingForm from './components/BookingForm'
 import Error from './components/Error'
 import PaymentForm from './components/PaymentForm'
-
-
+import AboutUs from './components/AboutUs'
+import SUPPORT from './components/Support'
+import UserLogin from './components/Login copy'
+import Register from './components/Register'
+import Testimonial from './components/Testimonial'
+import ListTrain from './components/ListTrain'
+import './Testimonial.css'
+import UserHistory from './components/UserHistory'
+import PaymentHistory from './components/PaymentHistory'
+import Banner from './components/Banner'
+import Notauthenticate from './components/Notauthenticate'
+import Weather from './components/Weather';
 function App() {
   return (
     <div>
@@ -26,13 +36,33 @@ function App() {
           <Route exact path="/">
             <Showcase />
             <Services />
+            <Testimonial/>
+            <Weather/>
+            <Banner/>
             <Footer />
+          </Route>
+          <Route exact path="/about">
+            <AboutUs/>
+            
           </Route>
           
           <Route exact path="/login">
             <Login />
 
           </Route>
+          <Route exact path="/userlogin">
+            <UserLogin />
+
+          </Route>
+          <Route exact path="/Register">
+            <Register/>
+
+          </Route>
+          <Route exact path="/weather">
+            <Weather/>
+            <Footer />
+          </Route>
+          
 
           <Route exact path="/checkin">
             <Checkin></Checkin>
@@ -48,10 +78,19 @@ function App() {
             <TrainList></TrainList>
             <Footer />
           </Route>
-
+          <Route exact path="/userhistory">
+            <UserHistory/>
+            <Footer />
+          </Route>
          
-          
-
+          <Route exact path="/paymenthistory">
+            <PaymentHistory/>
+            <Footer />
+          </Route>
+          <Route exact path="/notAuthenticate">
+            <Notauthenticate></Notauthenticate>
+            <Footer />
+          </Route>
 
           <Route exact path="/edit-train/:trainId">
             <AddTrain />
@@ -72,8 +111,13 @@ function App() {
             <Checkin />
             <Footer />
           </Route>
+          <Route path="/support">
+            <SUPPORT />
+           
+          </Route>
           <Route exact path="/booking">
             <BookingForm></BookingForm>
+            <ListTrain/>
             <Footer />
           </Route>
           

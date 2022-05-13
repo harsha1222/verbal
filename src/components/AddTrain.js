@@ -4,8 +4,9 @@ import AdminService from '../Services/AdminService'
 import { Link } from 'react-router-dom'
 
 const AddTrain = () => {
-    const [trainNo, settrainNo] = useState('')
     const [startPoint, setstartPoint] = useState('')
+    const [trainNo, settrainNo] = useState('')
+    const [trainName, settrainName] = useState('')
     const [endPoint, setendPoint] = useState('')
     const [arrivalTime, setarrivalTime] = useState('')
     const [deptTime, setdeptTime] = useState('')
@@ -20,7 +21,7 @@ const AddTrain = () => {
 
     const saveOrUpdateTrain = (e) => {
         e.preventDefault();
-        const TrainDetails = { trainNo, startPoint, endPoint, arrivalTime, deptTime, duration, noOfSeats, sleeperClass, SecondClass, firstClass, trainDate }
+        const TrainDetails = { trainNo, trainName, startPoint, endPoint, arrivalTime, deptTime, duration, noOfSeats, sleeperClass, SecondClass, firstClass, trainDate }
         if (id) {
             AdminService.upDateTrain(id, TrainDetails).then((response) => {
                 var e=JSON.stringify(response.data);
@@ -42,10 +43,11 @@ const AddTrain = () => {
 
 
     }
-
+<div className='yu'></div>
     useEffect(() => {
         AdminService.getTrainById(trainNo).then((response) => {
             settrainNo(response.data.trainNo)
+            settrainName(response.data.trainName)
             setstartPoint(response.data.startPoint)
             setendPoint(response.data.endPoint)
             setarrivalTime(response.data.arrivalTime)
@@ -85,6 +87,19 @@ const AddTrain = () => {
                         <div className="card-body">
                             <form>
                                 <div className="form-group mb-2">
+                                    <label className="form-label">StartPoint</label>
+
+                                    <input
+                                        type="text"
+                                        placeholder="Enter start point"
+                                        name="startPoint"
+                                        className="form-control"
+                                        value={startPoint}
+                                        onChange={(e) => setstartPoint(e.target.value)}>
+                                    </input>
+
+                                </div>
+                                  <div className="form-group mb-2">
                                     <label className="form-label">TrainNo</label>
 
                                     <input
@@ -95,18 +110,17 @@ const AddTrain = () => {
                                         value={trainNo}
                                         onChange={(e) => settrainNo(e.target.value)}>
                                     </input>
-
                                 </div>
-                                <div className="form-group mb-2">
-                                    <label className="form-label">StartPoint</label>
+                                  <div className="form-group mb-2">
+                                    <label className="form-label">TrainName</label>
 
                                     <input
                                         type="text"
-                                        placeholder="Enter start point"
-                                        name="startPoint"
+                                        placeholder="Enter train Name"
+                                        name="trainName"
                                         className="form-control"
-                                        value={startPoint}
-                                        onChange={(e) => setstartPoint(e.target.value)}>
+                                        value={trainName}
+                                        onChange={(e) => settrainName(e.target.value)}>
                                     </input>
 
                                 </div>
@@ -241,5 +255,6 @@ const AddTrain = () => {
         </div>
     )
 }
+
 
 export default AddTrain

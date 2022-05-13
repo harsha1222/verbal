@@ -20,12 +20,13 @@ const Search = () => {
             console.log(error)
         })
     }
+   
 
     return (
         <>
             <section className='showcase login'>
                 <div className='showcase-overlay'>
-
+           <Link to="/userlogin" className="btn btn-success" >Logout</Link> 
                     <form className='form-control'>
                         <input type='text' name='From' id='From' placeholder='Enter Start Station'
                             value={startPoint}
@@ -50,18 +51,21 @@ const Search = () => {
                             <div class="row">
                                 <div class="table-responsive ">
                                     <table class="table table-striped table-hover table-bordered">
+                                   
                                     <thead>
                                         <tr>
                                          <th>Train No </th>
+                                         <th>Train Name </th>
                                          <th>StartPoint </th>
                                          <th>EndPoint </th>
-                                     <th>DeptTime </th>
-                                       <th>Duration </th>
+                                         <th>DeptTime </th>
+                                         <th>Duration </th>
                                         <th>NoOfSeats </th>
                                         <th>SleeperClass </th>
                                         <th>SecondClass </th>
                                         <th>FirstClass </th>
-                                        <th>TrainDate </th>                                            <th>Actions</th>
+                                        <th>TrainDate </th>                                          
+                                        <th>Actions</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -70,6 +74,7 @@ const Search = () => {
                                                     TrainDetails =>
                                                     <tr key={TrainDetails.Id}>
                                                     <td>{TrainDetails.trainNo} </td>
+                                                        <td>{TrainDetails.trainName} </td>
                                                         <td>{TrainDetails.startPoint} </td>
                                                         <td>{TrainDetails.endPoint}</td>
                                                         <td>{TrainDetails.deptTime}</td>
@@ -81,7 +86,7 @@ const Search = () => {
                                                         <td> <Link className="btn btn-info" to='/booking'> Book </Link>
                                                         </td>
                                                             
-
+                                                       
 
                                                         </tr>
                                                 )
@@ -95,6 +100,7 @@ const Search = () => {
                 </div>
             </section>
         </>
+        
     )
 }
 
